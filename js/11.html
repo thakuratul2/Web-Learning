@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope Variables</title>
+</head>
+<body>
+    <h1>Block Scope[it define in curly brackets]</h1>
+    <script>
+        {
+            var x = 29;
+            document.write(x);
+        }
+    </script>
+<h1>
+    Global Scope[outsite the function]
+</h1>
+<script>
+    var y = 25;
+    document.write(y);
+    function MyScope(){
+        y += 25;
+        document.write(y); 
+    }
+    MyScope();
+</script>
+<h1>
+    Local Scope[Inside the function]
+</h1>
+<script>
+    function MyLocal(){
+        var z = 26;
+        document.write(z);
+    }
+    MyLocal();
+</script>
+</body>
+</html>
