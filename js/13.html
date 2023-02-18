@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h2>Define an Arrays</h2>
+    <script>
+        var ary = [10,20,30];
+        for(var x = 0;x<3;x++){
+            document.write(ary[x]+"<br>");
+        }
+    </script>
+    <h2>Type to Define Arrays</h2>
+    <script>
+        var arr = new Array();
+        arr[0] = "Atul";
+        arr[1] = "Pratap";
+        arr[2] = "Singh";
+        for(var i = 0;i<3;i++){
+            document.write(arr[i]+"<br>");
+        }
+    </script>
+    <h2>Taking Input in Array</h2>
+    <script>
+        var inp = new Array(3);
+
+        for(var g = 0;g<3;g++){
+            inp[g] = prompt("Enter the element: ");
+        }
+        for(var z = 0;z<3;z++){
+            document.write(inp[z]+"<br>");
+        }
+    </script>
+</body>
+</html>
