@@ -4,11 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dom Topic</title>
+    <title>Dom Project</title>
 </head>
+
 <body>
-    <center style="margin-top: 50px;">
-        <h2 style="text-decoration: underline;">Dom Topics</h2>
-    </center>
+    
+    <div id="app">
+        <img src="./quote.png" alt="img">
+        <p id="quote">Testing one to three</p>
+        <span id="line"></span>
+        <p id="author">
+            Atul Pratap Singh
+        </p>
+
+        <div id="controls">
+            <input type="text" name="quote" placeholder="Enter the quote...">
+            <input type="text" name="author" placeholder="Enter the author name....">
+            <button id="bgColor">
+                Change Background
+            </button>
+            <button id="clearText">
+                Clear Text
+            </button>
+            
+        </div>
+    </div>
 </body>
+<script>
+    let app = document.querySelector("#app");
+    let quote = document.querySelector("#quote");
+    let author = document.querySelector("#author");
+    let inputType = document.querySelector("[name=quote]");
+    let authorType = document.querySelector("[name=author]");
+    let btnChange = document.querySelector("#bgColor");
+    let clearText = document.querySelector("#clearText");
+
+    const color = ["#03fc56","#a903fc","#e3fc03","#03fcbe","#6203fc"];
+
+    btnChange.addEventListener("click",()=>{
+        let index = Math.floor(Math.random() * color.length);
+        let randomPick = color[index];
+
+        app.style.background = randomPick;
+    });
+
+    inputType.addEventListener("keyup",(e)=>{
+        quote.innerHTML = e.currentTarget.value;
+    });
+    authorType.addEventListener("keyup",(e)=>{
+        author.innerHTML = e.currentTarget.value;
+    });
+    clearText.addEventListener("click",()=>{
+        quote.innerHTML = "";
+        author.innerHTML = "";
+       
+    })
+
+</script>
 </html>
